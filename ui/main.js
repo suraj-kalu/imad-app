@@ -34,11 +34,9 @@ button.onclick=function(){
 var submit = document.getElementById('submit-btn');
 submit.onclick = function(){
 //Make request to server and send the name
-//Make a request to counter end point
- 
+
   var request = new XMLHttpRequest();
-  
-  
+
   //Capture the respose and store it into the variable
   
   request.onreadystatechange = function(){
