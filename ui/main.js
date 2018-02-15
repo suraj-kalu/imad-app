@@ -52,7 +52,7 @@ var list = '';
 for(var i =0; i< names.length;i++){
     list += '<li>' + names[i] + '</li>';
       }
-      var ul = document.getElementbyId('nameList');
+      var ul = document.getElementById('nameList');
   }
   }
 
