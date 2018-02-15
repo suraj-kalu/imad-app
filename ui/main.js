@@ -58,7 +58,7 @@ for(var i =0; i< names.length;i++){
 
 };
 
-var nameInput= document.getElementbyId('name');
+var nameInput= document.getElementById('name');
 var name= nameInput.value;
    request.open('GET','http://surajratnakalu.imad.hasura-app.io/submit-name?name='+ name,true);
    request.send(null);
