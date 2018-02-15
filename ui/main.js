@@ -28,3 +28,21 @@ button.onclick=function(){
    request.open('GET','http://surajratnakalu.imad.hasura-app.io/counter',true);
    request.send(null);
 };
+
+//Submit name
+
+var nameInput= document.getElementbyId('name');
+var name= nameInput.value;
+var submit = document.getElementById('submit-btn');
+
+//Make request to server and send the name
+
+//capture the list of names and render it to the list
+var names =['name1','name2','name3'];
+var list = '';
+for(var i =0; i< names.length;i++){
+    list += '<li>' + names[i] + '</li>';
+}
+
+var ul = document.getElementbyId('nameList');
+ul.innerHTML = list;
