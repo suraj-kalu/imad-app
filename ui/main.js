@@ -82,7 +82,7 @@ submit_comment.onclick = function(){
                 
                 var commentList = '';
                 for(var i=0; i<comments.length;i++){
-                    commentList += '<br>' + commentList + '<br>';
+                    commentList += '<br>' + comments[i] + '<br>';
                 }
                 var display = document.getElementById('displayComment');
                 display.innerHTML = commentList;
