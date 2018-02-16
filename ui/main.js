@@ -70,7 +70,7 @@ var name= nameInput.value;
 
 
 var submit_comment = document.getElementById('submiComment');
-submit_comment.onclinc=function(){
+submit_comment.onclick=function(){
     
     var request = new XMLHttpRequest();
     
