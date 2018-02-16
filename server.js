@@ -101,6 +101,12 @@ app.get('/submit-name',function(req,res){
 });
 
 
+var comments=[];
+app.get('/comments',function(req,res){
+    var comment = req.query.comments;
+    comments.push(comment);
+    res.send(JSOM.strngify(comments));
+});
 
 app.get('/:articleName', function (req, res) {
     /* articleName = article-one */
