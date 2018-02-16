@@ -7,13 +7,6 @@ app.use(morgan('combined'));
 
 
 
-var comments=[];
-app.get('/comments',function(req,res){
-    var comment = req.query.comments;
-    comments.push(comment);
-    res.send(JSON.stringify(comments));
-});
-
 
 
 
@@ -112,6 +105,13 @@ app.get('/submit-name',function(req,res){
     res.send(JSON.stringify(names));
 });
 
+
+var comments=[];
+app.get('/comments',function(req,res){
+    var comment = req.query.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+});
 
 
 app.get('/:articleName', function (req, res) {
