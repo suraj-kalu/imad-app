@@ -89,4 +89,11 @@ submit_comment.onclick = function(){
             }
         }
     };
+    var comments= document.getElementById('commentBox');
+var comment= nameInput.comments;
+   request.open('GET','http://surajratnakalu.imad.hasura-app.io/comments?comment='+ comment,true);
+   request.send(null);
+    
+    
+    
 };
