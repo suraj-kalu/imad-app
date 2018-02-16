@@ -81,7 +81,7 @@ submit_comment.onclick = function(){
                 comments = JSON.parse(comments);
                 
                 var commentList = '';
-                for(var i=0; i<commentList.length;i++){
+                for(var i=0; i<comments.length;i++){
                     commentList += '<br>' + commentList + '<br>';
                 }
                 var display = document.getElementById('displayComment');
