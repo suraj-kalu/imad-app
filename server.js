@@ -11,7 +11,7 @@ var comments=[];
 app.get('/comments',function(req,res){
     var comment = req.query.comments;
     comments.push(comment);
-    res.send(JSOM.strngify(comments));
+    res.send(JSON.stringify(comments));
 });
 
 
