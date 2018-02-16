@@ -5,6 +5,18 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+
+var comments=[];
+app.get('/comments',function(req,res){
+    var comment = req.query.comments;
+    comments.push(comment);
+    res.send(JSOM.strngify(comments));
+});
+
+
+
+
 var articles={
 'article-one':{
     title :'Article one | Suraj',
@@ -101,12 +113,6 @@ app.get('/submit-name',function(req,res){
 });
 
 
-var comments=[];
-app.get('/comments',function(req,res){
-    var comment = req.query.comments;
-    comments.push(comment);
-    res.send(JSOM.strngify(comments));
-});
 
 app.get('/:articleName', function (req, res) {
     /* articleName = article-one */
