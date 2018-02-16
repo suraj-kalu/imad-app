@@ -69,8 +69,8 @@ var name= nameInput.value;
 
 
 
-var submit_comment = document.getElementById('submiComment');
-submit_comment.onclick=function(){
+var submit_comment = document.getElementById('submitComment');
+submit_comment.onclick = function(){
     
     var request = new XMLHttpRequest();
     
