@@ -37,7 +37,7 @@ var articles={
     content:`<p>This is the third article</p>`
 }
 
-}
+};
 function createTemplate(data){
     var title = data.title;
     var date= data.date;
