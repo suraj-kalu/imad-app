@@ -64,3 +64,29 @@ var name= nameInput.value;
 
 
 };
+
+
+
+
+
+var submit_comment = document.getElementById('submiComment');
+submit_comment.onclinc=function(){
+    
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.status === 200){
+                var comments = request.responseText;
+                comments = JSON.parse(comments);
+                
+                var commentList = '';
+                for(var i=0; i<commentList.length;i++){
+                    commentList += '<br>' + commentList + '<br>';
+                }
+                var display = document.getElementById('displayComment');
+                display.innerHTML = commentList;
+            }
+        }
+    };
+};
