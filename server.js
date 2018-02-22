@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var config={
     user : 'surajratnakalu',
     database : 'surajratnakalu',
-    host : 'db-imad-hasura-app.io',
+    host : 'db.imad.hasura-app.io',
     port:'5432',
     password : process.env.DB_PASSWORD
 };
@@ -85,7 +85,7 @@ return htmlTemplate;
 
 
 var pool = new Pool(config);
-app.get('/test-db',function(req,res){
+app.get('/test-db',function(req, res){
    
    pool.query('SELECT * FROM test',function(err,result){
        if(err){
